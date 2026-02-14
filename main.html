@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit-protfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Poppins',sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(30, 28, 28);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            font-size: 1.04rem;
+            color: rgb(153, 153, 226);
+        }
+        main hr{
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        .left{
+            font-size: 1.5rem;
+
+        }
+        .first{
+            display: flex;
+            justify-content: space-around;
+            margin: 120px 0 ;
+            align-items: center;
+        }
+        .first >div{
+            width: 35%;
+        }
+        .leftsection{
+            font-size: 2.3rem;
+            margin: 30px 0;
+        }
+        .rightsection img{
+            width: 100%;
+           
+        }
+        .purple{
+            color: rgb(170,107,228);
+        }
+        .gray{
+            color: gray;
+        }
+        #element{
+            color: rgb(170,107,228);
+        }
+        .secondsection{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        .secondsection h1{
+            font-size: 1.9rpm;
+        }
+        .secondsection .box{
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+        .secondsection .vertical{
+            height: 93px;
+            width: 1px;
+            background: white;
+            margin: 0 120px;
+        }
+        .imagetop{
+              width: 23px;
+              position: relative;
+              top: -32px;
+              left: -9px;
+        }
+        .verticaltitle{
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+        .vertical-desc{
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+        footer{
+            background-color: rgb(32, 32, 41);
+            height: 325px;
+        }
+        .footer{
+            display: flex;
+            padding: 23px 123px;
+            justify-content: space-evenly;
+        }
+        .left img{
+            width: 200px;
+            height: 200px;
+            display: flex;
+        }
+        #about{
+            padding: 80px 0;
+            color: ababab;
+
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .aboutcol1{
+            flex-basis: 35%;
+
+        }
+        .aboutcol1 img{
+            width: 100%;
+            border-radius: 15px;
+        }
+        .aboutcol2{
+            flex-basis: 60%;
+
+        }
+        .subtitle{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .tabtitle{
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        .tablinks{
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        .tablinks::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #9c97f1;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        .tablinks.activelink::after{
+            width: 50%;
+
+
+
+        }
+        .tabcontent ul li{
+            list-style: none;
+            margin: 10px 0;
+
+        }
+        .tabcontent ul li span{
+            color: #9c97f1;
+            font-size: 14px;
+
+        }
+        .tabcontent{
+            display: none;
+        }
+        .tabcontent.activetab{
+            display: block;
+        }
+        #portfolio{
+            padding: 50px 0 ;
+        }
+        .socialicon img{
+            padding: 0;
+            width: 30px;
+            height: 25px;
+            margin-top: 30px;
+        }
+        .socialicon a{
+            text-decoration: none;
+           font-size: 20px;
+           margin-right: 10px;
+           display: inline-block; 
+           transition: transform(00.5s);
+        }
+        .contactleft{
+            flex-basis: 35%;
+        }
+        .contactright{
+            flex-basis: 60%;
+        }
+        .contactleft p{
+            margin-top: 30px;
+        }
+        .mohit img { 
+            padding: 0;
+            width: 30px;
+            height: 25px;
+            margin-right: 15px;
+            font-size: 15px;
+        }
+        .kamdi{
+            background: #9c97f1;
+        }
+        .btn.btn2{
+            display: inline-block;
+        }
+        .contactright form{
+            width: 100%;
+
+        }
+        form input , form textarea{
+            width: 100%;
+            border: 0;
+            outline: none;
+            background: #262626;
+            padding: 7px;
+            margin: 7px 0 ;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 6px;
+        }
+        form btn2{
+            padding: 14px 60px;
+            font-size: 18px;
+            margin-top: 20px;
+        cursor: pointer;
+        }
+        @media screen and (max-width: 300px) {
+            body{
+            
+            }
+            .firstsection{
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="mohit.png" alt=""> </div>
+            <div class="right">
+                <ul>
+                 <li> <a href="main.html">Home</li></a>
+                 <li> <a href="/">About</li></a>
+                 <li> <a href="/">Service</li></a>
+                  <li><a href="/">Project</li></a>
+                  <li><a href="/">Contact Me</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Mohit</span> 
+                <div>and I am a passionate</div> 
+                
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="m.png" alt="">
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="aboutcol1">
+                        <img src="n.png" alt="">
+                    </div>
+                    <div class="aboutcol2">
+                        <h1 class="subtitle">About Me </h1>
+                        <p>I am current engineering student at kavikulguru institute of technology and science . I am Currently Pursuing B.Tech degree in Information Technology branch .
+
+                            In current mode I am learning Cyber Security Basic To Advance . I am completed  Frontend Web Development On YouTube and also Learn Advanced C & C++ language In College. 
+                            
+                            I am looking for promising apportunity in Cyber Security As a fresher.
+                        </p>
+                            <div class="tabtitle">
+                                <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                                <p class="tablinks" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tabcontent activetab" id="skills">
+                                <ul>
+                                    <li><span>Programming Language</span><br>Python <br>C <br>C++</li>
+                                    <li><span>Tools\Platform</span><br>Github <br>VS code <br>Kali-Linux</li>
+                                    <li><span>Others</span><br>Networking  <br>Operating System  <br>Data Structure</li>
+                                </ul>
+                            </div>
+                            <div class="tabcontent" id="education">
+                                <ul>
+                                    <li><span>IT(Information Technology) Bachelor of Technology</span> <br>RASHTRASANT TUKADOJI MAHARAJ NAGPUR UNIVERSITY<br> Oct 2022 –May 2026<br>CGPA: 6.5</li>
+                                    <li><span>HSC (Higher Secondary Certificate Examination)</span> <br>Dr.B.R Ambedkar Jr. College,Hgt<br> May 2021 - May 2022 <br>Percentage:78.50%</li>
+                                    <li><span>SSC (Secondary School Certificate Examination)</span><br> S.S.M Vidhyalaya  HGT<br> March 2019-March 2020 <br>Percentage:73.50%</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="gray">What I have done so far</span>
+            <h1>Work Exprience</h1>
+            <div class="box">
+                <div class="vertical"> 
+                    <img class="imagetop" src="o.png" alt="">
+                    <div class="verticaltitle">
+                        Front-End Web Devloper Intern (Jan 2024-Feb 2024)
+                    </div>
+                    <div class="vertical-desc">
+                      I am complete my Front-End Web Devlopment Internship at TechnoHacks EduTech.
+                      As an intern, I am doing  the best  opportunity to work on real-world web 
+                      applications, collaborating with senior developers and designers to build 
+                      intuitive and user-friendly websites and web apps. This is an excellent
+                       opportunity for someone eager to learn and grow in the field of front-end
+                        development while contributing to meaningful projects.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="imagetop" src="p.png" alt="">
+                    <div class="verticaltitle">
+                        Python Devloper Intern (Jan 2025-Feb 2025)
+                    </div>
+                    <div class="vertical-desc">
+                        I am complete my Python Devlopment Internship at Cognifyz Technologies .
+                        As an intern, I am doing the best  opportunity to work on various Python-based
+                         projects, from data processing to web development. This role offers a hands-on
+                          learning experience where you will gain exposure to real-world applications and
+                           collaborate with experienced developers on innovative solution.
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section>
+            <div id="project">
+                <div class="container">
+                    <div class="row">
+                        <div class="project">
+                            <h1>Project</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <footer>
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contactleft">
+                            <h1 class="subtitle">Contact Me</h1>
+                            <p class="mohit"> <img src="gmail.png" alt="">mohitkamdi11@gmail.com</p>
+                            <p class="mohit"> <img src="call.png" alt="">9322188133</p>
+                            <div class="socialicon">
+                                <a href="https://www.linkedin.com/in/mohitkamdi"><img src="q.png" alt=""></a>
+                                <a href="https://x.com/kamdi_mohit"><img src="r.png"alt=""></a>
+                                <a href="https://github.com/Mohitkamdi"> <img src="s.png" alt=""></a>
+                                <a href="https://www.instagram.com/its_mohitkamdi"><img src="t.png" alt=""></a>
+                                <a href="https://www.facebook.com/kamdimohit"><img src="u.png" alt=""></a>
+                            </div>
+                           <button class="kamdi"> <a href="mohitkamdi-9322188133 (2).pdf" class="btn btn2">Download CV</a></button>
+                        </div>
+                        <div class="contactright">
+                            <form action="">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+    
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+        var typed = new Typed('#element', {
+          strings: ['Security Analyst', ' Engineer (Information Technology)'],
+          typeSpeed: 50,
+        }); 
+
+    var tablinks=document.getElementsByClassName("tablinks");
+    var tabcontent=document.getElementsByClassName("tabcontent");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("activelink");
+        }
+        for(tabcontents of tabcontent){
+            tabcontents.classList.remove("activetab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("activetab");
+    }
+</script>
+</body>
+</html>
